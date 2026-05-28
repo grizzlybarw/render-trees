@@ -696,7 +696,7 @@ function buildHUD(){
   fxSec.appendChild(slider('BLOOM',0,3,S.bloom,1,v=>{S.bloom=v;bloomPass.strength=v}).el);
   fxSec.appendChild(toggle('CHROMA SHIFT',S.chroma,v=>{S.chroma=v;chromaPass.enabled=v}).el);
   fxSec.appendChild(toggle('RAINBOW MODE',S.rainbow,v=>{S.rainbow=v}).el);
-  fxSec.appendChild(slider('TRIP INTENSITY',0,1,S.tripIntensity,2,v=>{
+  fxSec.appendChild(slider('INTENSITY',0,1,S.tripIntensity,2,v=>{
     S.tripIntensity=v;
     afterPass.uniforms.damp.value=.85+v*.13;
     chromaPass.uniforms.amount.value=v*.006;
